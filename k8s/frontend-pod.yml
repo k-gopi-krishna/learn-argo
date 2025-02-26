@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "frontend"
-  namespace: default
+  namespace: testme
   labels:
     app: "frontend"
 spec:
