@@ -1,0 +1,21 @@
+# https://kubernetes.io/docs/concepts/workloads/pods/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "frontend"
+  namespace: default
+  labels:
+    app: "frontend"
+spec:
+  containers:
+    - name: frontend
+      image: "nginx"
+      resources:
+        limits:
+          cpu: 200m
+          memory: 500Mi
+        requests:
+          cpu: 100m
+          memory: 200Mi
+      ports:  
+        - containerPort: 80
